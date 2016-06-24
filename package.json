@@ -1,0 +1,25 @@
+{
+  "name": "backend-server-mock",
+  "version": "0.0.1",
+  "description": "Mocks typical behaviors of backend servers.",
+  "scripts": {
+    "server": "node src/server.js",
+    "client": "node src/client.js",
+    "test": "mocha test --timeout=10000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/utensil/backend-server-mock.git"
+  },
+  "author": "utensil",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/utensil/backend-server-mock/issues"
+  },
+  "homepage": "https://github.com/utensil/backend-server-mock#readme",
+  "dependencies": {
+    "kalm": "^1.2.0",
+    "chai": "3.5.x",
+    "mocha": "2.5.x"
+  }
+}
