@@ -2,6 +2,10 @@ module.exports = {
   root: true,
   // https://github.com/feross/standard/blob/master/RULES.md#javascript-standard-style
   extends: 'standard',
+  env: {
+    node: true,
+    mocha: true
+  },
   plugins: [
   ],
   // add your custom rules here
@@ -16,9 +20,6 @@ module.exports = {
   'globals': {
     '_': false,
     'fetch': false,
-    '$': false,
-    'it': false,
-    'describe': false,
-    'beforeEach': false
+    '$': false
   }
 };
