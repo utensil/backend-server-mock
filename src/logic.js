@@ -22,12 +22,30 @@ const DUMMY_VALUES = _.values(DUMMY_MAP);
 
 class Logic {
   constructor(config) {
-    this.config = _.assign({}, {
+    this._config = _.assign({}, {
       REPEAT_COUNT,
       SUCCESS_RATE,
       MAX_TIMEOUT_IN_SECS,
       THRESHOLD
     }, config);
+  }
+
+  get config() {
+    return this._config;
+  }
+
+  set config(config) {
+    this._config = _.assign({}, this._config, config);
+  }
+
+  alterConfig(req) {
+    return new Promise((resolve, reject) => {
+      this.config = req.config;
+      resolve({
+        status: true,
+        value: this.config
+      });
+    })
   }
 
   doMath(req) {
@@ -89,5 +107,6 @@ class Logic {
 
 module.exports = {
   Logic,
-  DUMMY_VALUES
+  DUMMY_VALUES,
+  REPEAT_COUNT
 };
