@@ -5,7 +5,7 @@
   "scripts": {
     "server": "node src/server.js",
     "client": "node src/client.js",
-    "test": "mocha test --timeout=10000"
+    "test": "DEBUG=test mocha test --timeout=10000"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,11 @@
   },
   "homepage": "https://github.com/utensil/backend-server-mock#readme",
   "dependencies": {
+    "debug": "2.2.x",
     "kalm": "^1.2.0",
+    "lodash": "^4.13.1"
+  },
+  "devDependencies": {
     "chai": "3.5.x",
     "mocha": "2.5.x"
   }
