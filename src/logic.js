@@ -20,7 +20,19 @@ const DUMMY_MAP = {
 
 const DUMMY_VALUES = _.values(DUMMY_MAP)
 
+/**
+  Provides typical behaviors of bussiness logic.
+*/
 class Logic {
+
+  /**
+    @param {object} config configuration for Logic. Possible keys are:
+
+    * `REPEAT_COUNT`: `TODO`
+    * `SUCCESS_RATE`: `TODO`
+    * `MAX_TIMEOUT_IN_SECS`: `TODO`
+    * `THRESHOLD`: `TODO`
+  */
   constructor (config) {
     this._config = _.assign({}, {
       REPEAT_COUNT,
